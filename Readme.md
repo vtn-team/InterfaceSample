@@ -28,6 +28,7 @@ masterにはpushできないように設定してあります。
 masterにpushするとエラーになるので、注意してください。  
 
 
+
 ## 説明資料/参考文献
 [https://vtn-team.github.io/adventure-cube/EducationText/実践/02-抽象化.html](https://vtn-team.github.io/adventure-cube/EducationText/実践/02-抽象化.html)  
 [https://vtn-team.github.io/adventure-cube/EducationText/実践/03-インタフェース.html](https://vtn-team.github.io/adventure-cube/EducationText/実践/03-インタフェース.html)  
