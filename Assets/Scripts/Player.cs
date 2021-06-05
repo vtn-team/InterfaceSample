@@ -17,6 +17,7 @@ public class Player : FieldObject
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("エンター");
         //破壊可能なら消す
         IDestroy canDestroy = collision.gameObject.GetComponent<IDestroy>();
         if (canDestroy != null)
