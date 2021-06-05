@@ -2,16 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour, ISave
+public class Player : FieldObject
 {
-    public virtual void Save(SaveData.ObjectData data)
+    private void Start()
     {
-        data.PrefabName = "Player";
-        data.Position = this.transform.position;
-    }
-
-    public virtual void Load(SaveData.ObjectData data)
-    {
-        this.transform.position = data.Position;
+        //二体目以降のプレイヤーを消す
     }
 }

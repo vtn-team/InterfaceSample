@@ -13,14 +13,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void LoadData()
     {
         SaveManager.Load();
         SaveData data = SaveManager.GetData();
-        foreach(var d in data.ObjectList)
+        foreach (var d in data.ObjectList)
         {
             GameObject res = Resources.Load<GameObject>(d.PrefabName);
             if (res == null) continue;
