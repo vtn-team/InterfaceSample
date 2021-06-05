@@ -26,10 +26,10 @@ public class GameManager : MonoBehaviour
             if (res == null) continue;
             GameObject go = GameObject.Instantiate(res);
             if (go == null) continue;
-            ISave saveIf = go.GetComponent<ISave>();
-            if (saveIf == null) continue;
+            FieldObject fo = go.GetComponent<FieldObject>();
+            if (fo == null) continue;
 
-            saveIf.Load(d);
+            fo.Load(d);
         }
     }
 
@@ -42,9 +42,9 @@ public class GameManager : MonoBehaviour
         {
             SaveData.ObjectData d = new global::SaveData.ObjectData();
             if (go == null) continue;
-            ISave saveIf = go.GetComponent<ISave>();
-            if (saveIf == null) continue;
-            saveIf.Save(d);
+            FieldObject fo = go.GetComponent<FieldObject>();
+            if (fo == null) continue;
+            fo.Save(d);
             data.ObjectList.Add(d);
             Debug.Log(d);
         }
