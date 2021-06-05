@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FieldObject : MonoBehaviour, ISave
+public class ObjectBase : MonoBehaviour,ISave
 {
-    //string prefabName = "FieldObject";
-    //private void Start()
-    //{
-    //    prefabName = this.name.Replace("(Clone)", "");
-    //}
-    // Save Load をまとめる？
+    string prefabName = "none";
+
+    public virtual void SetName(string pName)
+    {
+        prefabName = pName;
+    }
 
     public virtual void Save(SaveData.ObjectData data)
     {
-        data.PrefabName = this.name.Replace("(Clone)", "");
+        data.PrefabName = prefabName;
         data.Position = this.transform.position;
     }
 

@@ -2,18 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FieldObject : MonoBehaviour, ISave
+public class Enemy : MonoBehaviour, ISave
 {
-    //string prefabName = "FieldObject";
-    //private void Start()
-    //{
-    //    prefabName = this.name.Replace("(Clone)", "");
-    //}
-    // Save Load をまとめる？
+    //string prefabName = "Enemy";
 
     public virtual void Save(SaveData.ObjectData data)
     {
-        data.PrefabName = this.name.Replace("(Clone)", "");
+        data.PrefabName = "Enemy";
         data.Position = this.transform.position;
     }
 
@@ -21,4 +16,5 @@ public class FieldObject : MonoBehaviour, ISave
     {
         this.transform.position = data.Position;
     }
+
 }
