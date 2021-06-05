@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseObject : MonoBehaviour
+public class BaseObject : MonoBehaviour, ISave
 {
-    // Start is called before the first frame update
-    void Start()
+    public virtual void Save(SaveData.ObjectData data)
     {
-        
+        data.PrefabName = this.name.Replace("(Clone)", "");
+        data.Position = this.transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void Load(SaveData.ObjectData data)
     {
-        
+        this.transform.position = data.Position;
     }
 }
