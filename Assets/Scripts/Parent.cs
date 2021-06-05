@@ -2,18 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Parent
+public class Parent : MonoBehaviour,ISave
 {
-    /*
-    public override void Save(SaveData.ObjectData data)
+    public virtual void Save(SaveData.ObjectData data)
     {
         data.PrefabName = this.name.Replace("(Clone)", "");
         data.Position = this.transform.position;
     }
 
-    public override void Load(SaveData.ObjectData data)
+    public virtual void Load(SaveData.ObjectData data)
     {
         this.transform.position = data.Position;
     }
-    */
 }
