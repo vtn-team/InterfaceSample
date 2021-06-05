@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Keishou
+public class Enemy : Keishou
 {
-    
+
 }
