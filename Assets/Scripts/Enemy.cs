@@ -5,10 +5,10 @@ using UnityEngine;
 public class Enemy : FieldObject
 {
     // Start is called before the first frame update
-    public override void Save(SaveData.ObjectData data)
-    {
-        data.PrefabName = "Enemy";
-    }
+    //public override void Save(SaveData.ObjectData data)
+    //{
+    //    data.PrefabName = "Enemy";
+    //}
 
     private void OnCollisionEnter(Collision collision)
     {
