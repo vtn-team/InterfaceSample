@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : FieldObject
+public class Enemy : BaseObject
 {
-    public override void Save(SaveData.ObjectData data)
-    {
-        base.Save(data);
-    }
+    //public override void Save(SaveData.ObjectData data)
+    //{
+    //    base.Save(data);
+    //}
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
