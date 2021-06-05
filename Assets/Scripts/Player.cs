@@ -6,11 +6,11 @@ public class Player : FieldObject
 {
     public override void Save(SaveData.ObjectData data)
     {
-        base.Save(data);
+        // ここに新しい要素を書く
     }
 
     public override void Load(SaveData.ObjectData data)
     {
-        base.Load(data);
+        // ここに新しい要素を書く
     }
 }
