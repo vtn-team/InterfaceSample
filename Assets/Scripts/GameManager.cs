@@ -18,6 +18,17 @@ public class GameManager : MonoBehaviour
 
     public void LoadData()
     {
+        //シーン上の古い情報を削除
+        var lists = GameObject.FindObjectsOfType<GameObject>();
+        foreach (GameObject go in lists)
+        {
+            SaveData.ObjectData d = new global::SaveData.ObjectData();
+            if (go == null) continue;
+            ISave saveIf = go.GetComponent<ISave>();
+            if (saveIf == null) continue;
+            Destroy(go);
+        }
+
         SaveManager.Load();
         SaveData data = SaveManager.GetData();
         foreach(var d in data.ObjectList)

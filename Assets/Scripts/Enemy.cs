@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : FieldObject
+public class Enemy : FieldObject
 {
     public override void Save(SaveData.ObjectData data)
     {
-        data.PrefabName = "Player";
+        data.PrefabName = "Enemy";
         data.Position = this.transform.position;
     }
 
