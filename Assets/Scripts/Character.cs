@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Character
+public class Character : MonoBehaviour, ISave
 {
-    public override void Save(SaveData.ObjectData data)
+    [SerializeField] protected string _prefabName;
+    public virtual void Save(SaveData.ObjectData data)
     {
         data.PrefabName = _prefabName;
         data.Position = this.transform.position;
     }
 
-    public override void Load(SaveData.ObjectData data)
+    public virtual void Load(SaveData.ObjectData data)
     {
         this.transform.position = data.Position;
     }
