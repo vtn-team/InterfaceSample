@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : FieldObject
+public class Enemy : FieldObject, IDestroy
 {
     public override void Save(SaveData.ObjectData data)
     {
@@ -13,5 +13,10 @@ public class Enemy : FieldObject
     public override void Load(SaveData.ObjectData data)
     {
         this.transform.position = data.Position;
+    }
+
+    public void Death()
+    {
+        Destroy(this.gameObject);
     }
 }

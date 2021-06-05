@@ -14,4 +14,14 @@ public class Player : FieldObject
     {
         this.transform.position = data.Position;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //破壊可能なら消す
+        IDestroy canDestroy = collision.gameObject.GetComponent<IDestroy>();
+        if (canDestroy != null)
+        {
+            canDestroy.Death();
+        }
+    }
 }
