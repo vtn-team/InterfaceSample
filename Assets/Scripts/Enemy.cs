@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : FieldObject
+public class Enemy : MonoBehaviour, ISave
 {
-    //課題:Try
-    public override void Save(SaveData.ObjectData data)
+    public virtual void Save(SaveData.ObjectData data)
     {
         data.PrefabName = "Enemy";
         data.Position = this.transform.position;
     }
-    public override void Load(SaveData.ObjectData data)
+    public virtual void Load(SaveData.ObjectData data)
     {
         this.transform.position = data.Position;
     }
