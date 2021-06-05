@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 //https://qiita.com/tomopiro/items/87b634e98975b3c87c26
+
+[RequireComponent(typeof(CharacterController))]
+
 public class CCMove : MonoBehaviour
 {
     //十字キーのみで操作(上下矢印キー＝前後，左右矢印キー＝回転)
@@ -36,6 +38,5 @@ public class CCMove : MonoBehaviour
         }
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * Time.deltaTime);
-
     }
 }
