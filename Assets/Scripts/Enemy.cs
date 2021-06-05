@@ -11,10 +11,4 @@ public class Enemy : FieldObject
             Destroy(this.gameObject);
         }
     }
-
-    public override void Save(SaveData.ObjectData data)
-    {
-        data.PrefabName = "Enemy";
-        data.Position = this.transform.position;
-    }
 }

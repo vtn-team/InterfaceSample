@@ -18,6 +18,12 @@ public class GameManager : MonoBehaviour
 
     public void LoadData()
     {
+        var objs = FindObjectsOfType<FieldObject>();
+        foreach (var obj in objs)
+        {
+            Destroy(obj.gameObject);
+        }
+
         SaveManager.Load();
         SaveData data = SaveManager.GetData();
         foreach(var d in data.ObjectList)
@@ -26,6 +32,11 @@ public class GameManager : MonoBehaviour
             if (res == null) continue;
             GameObject go = GameObject.Instantiate(res);
             if (go == null) continue;
+            //ISave saveIf = go.GetComponent<ISave>();
+            //if (saveIf == null) continue;
+
+            //saveIf.Load(d);
+
             FieldObject fo = go.GetComponent<FieldObject>();
             if (fo == null) continue;
 
@@ -42,6 +53,10 @@ public class GameManager : MonoBehaviour
         {
             SaveData.ObjectData d = new global::SaveData.ObjectData();
             if (go == null) continue;
+            //ISave saveIf = go.GetComponent<ISave>();
+            //if (saveIf == null) continue;
+            //saveIf.Save(d);
+
             FieldObject fo = go.GetComponent<FieldObject>();
             if (fo == null) continue;
             fo.Save(d);

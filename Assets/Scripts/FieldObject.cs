@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FieldObject : MonoBehaviour
+public class FieldObject : MonoBehaviour//, ISave
 {
     public virtual void Save(SaveData.ObjectData data)
     {
