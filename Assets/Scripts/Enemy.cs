@@ -4,12 +4,6 @@ using UnityEngine;
 
 public class Enemy : FieldObject
 {
-    public override void Save(SaveData.ObjectData data)
-    {
-        data.PrefabName = "Enemy";
-        data.Position = this.transform.position;
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")

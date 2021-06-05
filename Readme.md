@@ -41,12 +41,7 @@
 例) わからなかった  
 
 回答： 
-Must : Enemyクラスを作成した。
-EnemyクラスはISaveを持つ。
-OnCollisionEnterを利用し、TagがPlayerのオブジェクトに衝突すると自身をDestroyする。
-
-Try : PlayerとEnemyの二つにFieldObjectを継承させた。
-Save機能をoverrideさせ、継承先のLoadメソッドを消した。
+Tryまでやった
 
 ## 質問内容があれば記述してください  
 
