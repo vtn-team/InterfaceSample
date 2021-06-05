@@ -8,12 +8,6 @@ public class Enemy : FieldObject
     public override void Save(SaveData.ObjectData data)
     {
         data.PrefabName = "Enemy";
-        //data.Position = this.transform.position;
-    }
-
-    public override void Load(SaveData.ObjectData data)
-    {
-        //this.transform.position = data.Position;
     }
 
     private void OnCollisionEnter(Collision collision)
