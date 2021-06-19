@@ -2,19 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, ISave
+public class Enemy : SavedObject
 {
     bool _isDead = false;
 
-    public virtual void Save(SaveData.ObjectData data)
+    private void Awake()
     {
-        data.PrefabName = "Enemy";
-        data.Position = this.transform.position;
-    }
-
-    public virtual void Load(SaveData.ObjectData data)
-    {
-        this.transform.position = data.Position;
+        setPrefabName("Enemy");
     }
 
     private void Update()
