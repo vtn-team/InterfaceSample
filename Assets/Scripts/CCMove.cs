@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+//using UnityEngine;
 
 //https://qiita.com/tomopiro/items/87b634e98975b3c87c26
 public class CCMove : MonoBehaviour

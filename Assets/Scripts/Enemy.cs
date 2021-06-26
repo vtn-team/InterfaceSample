@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FieldObject : LoadAndSave, ISave
+public class Enemy : LoadAndSave, ISave
 {
     //public virtual void Save(SaveData.ObjectData data)
     //{
-    //    data.PrefabName = this.name.Replace("(Clone)", "");
+    //    data.PrefabName = "Enemy";
     //    data.Position = this.transform.position;
     //}
 
@@ -14,4 +14,12 @@ public class FieldObject : LoadAndSave, ISave
     //{
     //    this.transform.position = data.Position;
     //}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
