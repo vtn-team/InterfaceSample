@@ -7,13 +7,20 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoadData();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            SaveData();
+        }
+        if(Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            LoadData();
+        }
     }
 
     public void LoadData()
