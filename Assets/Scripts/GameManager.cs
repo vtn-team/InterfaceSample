@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     {
         SaveManager.Load();
         SaveData data = SaveManager.GetData();
+
         foreach(var d in data.ObjectList)
         {
             GameObject res = Resources.Load<GameObject>(d.PrefabName);
@@ -38,6 +39,7 @@ public class GameManager : MonoBehaviour
         SaveData data = SaveManager.GetData();
         data.ObjectList.Clear();
         var lists = GameObject.FindObjectsOfType<GameObject>();
+        
         foreach (GameObject go in lists)
         {
             SaveData.ObjectData d = new global::SaveData.ObjectData();

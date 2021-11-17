@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour, ISave
+public class CharaBase : MonoBehaviour, ISave
 {
-    public virtual void Save(SaveData.ObjectData data)
+    public void Save(SaveData.ObjectData data)
     {
-        data.PrefabName = "Player";
+        data.PrefabName = gameObject.name;
         data.Position = this.transform.position;
     }
 
-    public virtual void Load(SaveData.ObjectData data)
+    public void Load(SaveData.ObjectData data)
     {
         this.transform.position = data.Position;
     }

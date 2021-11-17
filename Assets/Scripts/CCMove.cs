@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //https://qiita.com/tomopiro/items/87b634e98975b3c87c26
-public class CCMove : MonoBehaviour
+public class CCMove : CharaBase
 {
     //十字キーのみで操作(上下矢印キー＝前後，左右矢印キー＝回転)
     //CharacterControllerが必要
