@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 //https://qiita.com/tomopiro/items/87b634e98975b3c87c26
-public class CCMove : MonoBehaviour
+public class CCMove : CalactorBase
 {
     //十字キーのみで操作(上下矢印キー＝前後，左右矢印キー＝回転)
     //CharacterControllerが必要
@@ -24,6 +23,11 @@ public class CCMove : MonoBehaviour
 
     void Update()
     {
+        Move();
+    }
+
+    protected override void Move()
+    {
         h = Input.GetAxis("Horizontal");    //左右矢印キーの値(-1.0~1.0)
         v = Input.GetAxis("Vertical");      //上下矢印キーの値(-1.0~1.0)
 
@@ -36,6 +40,5 @@ public class CCMove : MonoBehaviour
         }
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * Time.deltaTime);
-
     }
 }
