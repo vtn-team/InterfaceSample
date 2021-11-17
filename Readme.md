@@ -36,13 +36,9 @@
 
 ## 課題をどこまでやれましたか？  
 
-例) Tryまでやった  
-例) Mustだけやった  
-例) わからなかった  
-
-回答： MustとTryを完了した。
-(Must) Isaveを実装したEnemyクラスを作り、位置のセーブ・ロードを可能にした。
-(Try) PlayerとEnemyに、FieldObjectクラスを継承させた。
+回答： MustとTryを完了した。  
+**【Must】** Isaveを実装したEnemyクラスを作り、位置のセーブ・ロードを可能にした。  
+**【Try】** PlayerとEnemyに、FieldObjectクラスを継承させた。
 
 
 ## 質問内容があれば記述してください  
