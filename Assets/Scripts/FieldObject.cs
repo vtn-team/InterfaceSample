@@ -6,7 +6,8 @@ public class FieldObject : MonoBehaviour, ISave
 {
     public virtual void Save(SaveData.ObjectData data)
     {
-        data.PrefabName = this.name.Replace("(Clone)", "");
+        data.PrefabName = "Enemy";
+        //data.PrefabName = this.name.Replace("(Clone)", "");
         data.Position = this.transform.position;
     }
 

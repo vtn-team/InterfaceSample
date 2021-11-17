@@ -38,4 +38,19 @@ public class CCMove : MonoBehaviour
         controller.Move(moveDirection * Time.deltaTime);
 
     }
+
+
+    //オブジェクトが衝突したとき
+    void OnCollisionEnter(Collision collision)
+    {
+        string obj = collision.gameObject.name;
+        if (obj.Contains("Enemy"))
+        {
+            collision.gameObject.SetActive(false);
+        }
+        if (collision != null)
+        {
+            Debug.Log(collision.gameObject.name);
+        }
+    }
 }
